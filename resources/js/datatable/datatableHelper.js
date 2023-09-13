@@ -98,11 +98,11 @@ class datatableHelper {
 
     getButtons(buttons) {
         let formattedButtons = ``;
-        data.map(function (value) {
+        buttons.map(function (value) {
 
             switch (value.processType) {
                 case "delete":
-                    buttons += `
+                    formattedButtons += `
               <button type="button" onclick="deleteModal('${value.route}')" class="btn btn-${value.type} btn-delete btn-sm">
                  <i class="fa ${value.icon}"></i>
               </button>
